@@ -1,22 +1,30 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Flag from 'react-world-flags'
+import EmailIcon from 'react-icons/lib/fa/envelope'
+import FormIcon from 'react-icons/lib/md/description'
 import instantsearch from 'instantsearch.js'
+import { colors } from '../shared/styles'
 
-const Status = props => <div style={{ width: 16, height: 16, borderRadius: '50%', margin: '0 auto', background: props.color }}></div>
+const Status = props => <div style={{ width: 12, height: 12, borderRadius: '50%', margin: '0 auto', background: props.color }}></div>
+
+const Pill = ({ title, index }) => <span style={{ background: 'rgb(78, 126, 255)', padding: '3px 7px', borderRadius: '10px', marginRight: '3px', color: '#FFF', fontSize: '12px' }}>{title}</span>
 
 const gdprStatuses = []
 
 const GdprStatus = props => {
   switch(props.status) {
     case 'ready':
-      return <Status color='green' title='Ready' />
-    case 'in-process':
+      return <Status color='#00BC76' title='Ready' />
+    case 'inProgress':
       return <Status color='#4f7fff'  title='In progress' />
-    case 'no':
-      return <Status color='red' title='No' />  
+    case 'nonCompliant':
+      return <Status color='red' title='Non compliant' />  
     case 'unknown':
       return <Status color='grey' title='Unknown' />  
+    default:
+      return <div>Invalid</div>
+      break;
   }
 }
 
@@ -25,10 +33,10 @@ const IndexPage = ({ data }) => (
     <table>
       <thead>
         <tr style={{ backgroundColor: 'rgb(91, 95, 105)' }}>
-          <th style={{ width: '60px' }}></th>
-          <th>Name</th>
+          <th></th>
+          <th style={{ textAlign: 'left' }}>Name</th>
           <th>Status</th>
-          <th>Category</th>
+          {/* <th>Category</th> */}
           <th>Country</th>
           <th>Website</th>
           <th>ToC</th>
@@ -38,24 +46,26 @@ const IndexPage = ({ data }) => (
           <th>Data breaches</th>
           <th>DPO</th>
           <th>Certifications</th>
-          <th>Last updated</th>
+          {/* <th>Last updated</th> */}
           <th>Form</th>
-          <th>Update</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
         { data && data.allCompaniesJson.edges.map(({ node }, index) =>
           <tr key={index}>
-            <td><img src={node.logo} style={{ width: 24, marginBottom: 0, marginRight: '10px' }} alt=""/> </td>
             <td>
-             {node.name}
+              <img src={node.logo} style={{ width: 32, marginBottom: 0, marginRight: '10px' }} alt=""/> 
+            </td>
+            <td style={{ fontWeight: 'bold', textAlign: 'left' }}>
+              {node.name}
             </td>
             <td>
               <GdprStatus status={node.gdprStatus} />
             </td>
-            <td>
+            {/* <td>
               Category
-            </td>
+            </td> */}
             <td>
               <Flag code={node.country} height='12' />
             </td>
@@ -66,32 +76,31 @@ const IndexPage = ({ data }) => (
               <a href={node.termsUrl}>Terms</a>
             </td>
             <td>
-            <a href={node.privacyUrl}>Privacy</a>
+              <a href={node.privacyUrl}>Privacy</a>
             </td>
             <td>
               4
             </td>
             <td>
-              {node.dataCenters.map((d, index) => <span key={index}>{d}</span>)}
+              {node.dataCenters.map((d, index) => <Pill key={index} title={d} />)}
             </td>
             <td>
               {node.dataBreaches.length ? node.dataBreaches.length : '-'}
             </td>
             <td>
-              {node.DPO.name}
+              {node.DPO.email ? <a href={`mailto:${node.DPO.email}`}><EmailIcon style={{ marginRight: '5px' }} />{node.DPO.name}</a> : '-' }
             </td>
             <td>
-              {node.certifications && node.certifications.map((d, index) => <span style={{ background: '#DDD', padding: '3px', borderRadius: '3px', marginRight: '3px' }} key={index}>{d}</span>)}
+              {node.certifications && node.certifications.map((d, index) => <Pill key={index} title={d} />)}
             </td>
-            <td>
+            {/* <td>
               {Date.now()}
+            </td> */}
+            <td>
+              {node.formUrl ? <a href={`https://${node.name}.gdprform.io`}><FormIcon size={20} /></a> : ''}
             </td>
             <td>
-              {console.log(node)}
-              {node.formUrl ? <a href={`https://${node.name}.gdprform.io`}>Form</a> : ''}
-            </td>
-            <td>
-              <a href={`https://${node.name}.gdprform.io`}>Update</a>
+              <a href={`https://${node.name}.gdprform.io`}>Edit</a>
             </td>
           </tr>
         )}
@@ -103,7 +112,7 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const query = graphql`
-  query Com4 {
+  query Com10 {
     allCompaniesJson {
       edges {
         node {
