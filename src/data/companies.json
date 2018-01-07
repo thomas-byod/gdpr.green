@@ -148,5 +148,31 @@
     "dataRentention": "",
     "formUrl": "https://bs.gdprform.io",
     "certifications": ["ISO27k"]
+  },
+  
+  {
+    "id": "test",
+    "name": "Crowdbase",
+    "description": "Event Management Platform",
+    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "website": "https://www.beatswitch.com",
+    "country": "BE",
+    "gdprStatus": "ready",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Gertjan De Wilde",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k"]
   }
 ]
