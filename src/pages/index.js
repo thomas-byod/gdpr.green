@@ -7,8 +7,8 @@ import instantsearch from 'instantsearch.js'
 import { colors } from '../shared/styles'
 
 const Status = props => <div style={{ width: 12, height: 12, borderRadius: '50%', margin: '0 auto', background: props.color }}></div>
-
 const Pill = ({ title, index }) => <span style={{ background: 'rgb(78, 126, 255)', padding: '3px 7px', borderRadius: '10px', marginRight: '3px', color: '#FFF', fontSize: '12px' }}>{title}</span>
+const A = ({link, title}) =>  <a href={link} target='_blank'>{title}</a>
 
 const gdprStatuses = []
 
@@ -34,13 +34,13 @@ const IndexPage = ({ data }) => (
       <thead>
         <tr style={{ backgroundColor: 'rgb(91, 95, 105)' }}>
           <th></th>
-          <th style={{ textAlign: 'left' }}>Name</th>
+          <th>Name</th>
           <th>Status</th>
           {/* <th>Category</th> */}
           <th>Country</th>
           <th>Website</th>
           <th>ToC</th>
-          <th>Privacy URL</th>
+          <th>Privacy</th>
           <th>Articles</th>
           <th>Data centers</th>
           <th>Data breaches</th>
@@ -55,10 +55,10 @@ const IndexPage = ({ data }) => (
         { data && data.allCompaniesJson.edges.map(({ node }, index) =>
           <tr key={index}>
             <td>
-              <img src={node.logo} style={{ width: 32, marginBottom: 0, marginRight: '10px' }} alt=""/> 
+              <img src={node.logo} className='icon' alt={`${node.name} icon`} /> 
             </td>
-            <td style={{ fontWeight: 'bold', textAlign: 'left' }}>
-              {node.name}
+            <td>
+              <p style={{ fontWeight: 'bold' }}>{node.name}</p>
             </td>
             <td>
               <GdprStatus status={node.gdprStatus} />
@@ -70,16 +70,16 @@ const IndexPage = ({ data }) => (
               <Flag code={node.country} height='12' />
             </td>
             <td>
-              <a href={node.website}>Website</a>
+              <A link={node.website} title='Website' />
             </td>
             <td>
-              <a href={node.termsUrl}>Terms</a>
+              <A link={node.termsUrl} title='Terms' />
             </td>
             <td>
-              <a href={node.privacyUrl}>Privacy</a>
+              <A link={node.privacyUrl} title='Privacy' />
             </td>
             <td>
-              4
+              {node.articles && node.articles.length ? node.articles.length : '-' }
             </td>
             <td>
               {node.dataCenters.map((d, index) => <Pill key={index} title={d} />)}
@@ -135,6 +135,10 @@ export const query = graphql`
           dataCenters
           formUrl,
           certifications
+          articles {
+            date,
+            url
+          }
         }
       }
     }

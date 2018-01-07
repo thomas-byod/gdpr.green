@@ -6,6 +6,7 @@ import PlusIcon from 'react-icons/lib/fa/plus'
 import SearchIcon from 'react-icons/lib/go/search'
 import GithubIcon from 'react-icons/lib/go/mark-github'
 import ProductHuntIcon from 'react-icons/lib/fa/product-hunt'
+import TwitterIcon from 'react-icons/lib/fa/twitter'
 import icon from '../images/icon.svg'
 import { colors } from '../shared/styles'
 
@@ -48,7 +49,7 @@ const Header = () => (
         <span 
           style={{ 
             color: 'rgb(160, 165, 179)', 
-            fontSize: '1rem', marginLeft: '10px' 
+            fontSize: '1rem', marginLeft: '10px'
             }}
           > 
           | GDPR Readiness directory
@@ -56,26 +57,45 @@ const Header = () => (
       </div>
 
       {/* Search */}
-      <div style={{ flex: 1, justifyContent: 'center' }}>
-        <input type="text" style={{ borderRadius: '3px', padding: '14px 15px', width: '400px', border: '1px solid #EEE', background: '#FFF' }} placeholder={<SearchIcon /> + `Search product or company`}/>
+      <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <input type="text" style={{ borderRadius: '3px', padding: '14px 15px', width: '400px', border: '1px solid #EEE', background: '#FFF' }} placeholder={`Search product or company`}/>
       </div>
 
       {/* Menu */}
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, alignItems: 'center' }}>
         <ul style={{ listStyle: 'none', float: 'right', margin: 0 }}>
           <Li><div><p> 100 : 20 : 04 : 01</p></div></Li>
           <Li>About</Li>
-          <Li><a href="https://github.com/Gdewilde/gdpr.green"><GithubIcon color='#FFF' size={24} /></a></Li>
-          <Li><ProductHuntIcon color='#FFF' size={24} /></Li>
-          <Li style={{ margin: 0, padding: 0 }}>
-            <a href='https://github.com/Gdewilde/gdpr.green/blob/master/src/data/companies.json'>
+          <Li>
+            <a href="https://github.com/Gdewilde/gdpr.green">
+              <GithubIcon id='gh' color='#FFF' size={24} />
+              </a>
+          </Li>
+          <Li>
+            <a href="https://github.com/Gdewilde/gdpr.green">
+              <ProductHuntIcon id='ph' color='#FFF' size={24} />
+            </a>
+          </Li>
+          <Li>
+            <a href="https://github.com/Gdewilde/gdpr.green">
+              <TwitterIcon id='ph' color='#FFF' size={24} />
+            </a>
+          </Li>
+          <Li style={{ margin: '0 0 0 15px', padding: 0 }}>
+            <a 
+              href='https://github.com/Gdewilde/gdpr.green/blob/master/src/data/companies.json'
+              style={{ 
+                textDecoration: 'none'
+                }}
+              >
               <div style={{ 
               borderRadius: 3, 
               backgroundColor: '#4F7FFF', 
               padding: '14px 15px', 
               textDecoration: 'none', 
               color: 'white',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              textDecoration: 'none'
               }}>
                 <PlusIcon style={{ marginRight: '5px' }} />Add company
               </div>

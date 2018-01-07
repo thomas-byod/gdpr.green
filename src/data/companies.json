@@ -98,5 +98,34 @@
     "dataRentention": "",
     "formUrl": "https://bs.gdprform.io",
     "certifications": ["ISO27k", "HIPAA"]
+  },
+  {
+    "id": "sendgrid",
+    "name": "Sendgrid",
+    "description": "Event Management Platform",
+    "logo": "https://sendgrid.com/wp-content/themes/sgdotcom/pages/resource/brand/2016/SendGrid-Logomark.png",
+    "website": "https://www.beatswitch.com",
+    "country": "US",
+    "gdprStatus": "inProgress",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU", "US"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Krista Southworth",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "articles": [{
+      "date": "11/14/2017",
+      "url": "https://sendgrid.com/blog/the-gdpr-is-coming-how-to-prepare/"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k"]
   }
 ]

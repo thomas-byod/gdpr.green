@@ -2,11 +2,6 @@ img, td p {
   margin-bottom: 0
 }
 
-th:first-child, td:first-child {
-  padding-left: 30px;
-  text-align: left;
-}
-
 th {
   text-align: center;
   color: rgba(255, 255, 255, 0.74);
@@ -23,22 +18,45 @@ td {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
-tr:nth-child(even) {background: #EEE}
-tr:nth-child(odd) {background: #FFF}
-
-tr:nth-child(even):hover {background: #ffa}
-tr:nth-child(odd):hover {background: #ffa}
-
 table a {
-  /* text-decoration: none; */
   color: #777;
-  /* color: #4f7fff */
+}
+
+/* Navigation */
+
+a #gh,
+a #ph,
+a #tw  { 
+  opacity: 0.7;
+  color: #FFF
+}
+
+a:hover #gh,
+a:hover #ph,
+a:hover #tw  { 
+  opacity: 1;
 }
 
 
 
+@media 
+only screen and (min-width: 760px) {
+  th:first-child, td:first-child {
+    padding-left: 30px;
+    text-align: left;
+  }
 
+  td img.icon {
+    width: 32px;
+    margin: 0 auto
+  }
 
+  tr:nth-child(even) {background: #EEE}
+  tr:nth-child(odd) {background: #FFF}
+
+  tr:nth-child(even):hover {background: #ffa}
+  tr:nth-child(odd):hover {background: #ffa}
+}
 
 /* 
 Max width before this PARTICULAR table gets nasty
@@ -52,7 +70,7 @@ only screen and (max-width: 760px),
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
 		display: block; 
-	}
+  }
 	
 	/* Hide table headers (but not display: none;, for accessibility) */
 	thead tr { 
@@ -60,8 +78,6 @@ only screen and (max-width: 760px),
 		top: -9999px;
 		left: -9999px;
 	}
-	
-	tr { border: 1px solid #ccc; }
 
 	td { 
 		/* Behave  like a "row" */
@@ -80,21 +96,30 @@ only screen and (max-width: 760px),
 		width: 45%; 
 		padding-right: 10px; 
 		white-space: nowrap;
-	}
+  }
+
+  td img.icon {
+    width: 128px;
+    margin: 25px auto;
+  }
 	
 	/*
 	Label the data
-	*/
-	td:nth-of-type(1):before { content: "First Name"; }
-	td:nth-of-type(2):before { content: "Last Name"; }
-	td:nth-of-type(3):before { content: "Job Title"; }
-	td:nth-of-type(4):before { content: "Favorite Color"; }
-	td:nth-of-type(5):before { content: "Wars of Trek?"; }
-	td:nth-of-type(6):before { content: "Porn Name"; }
-	td:nth-of-type(7):before { content: "Date of Birth"; }
-	td:nth-of-type(8):before { content: "Dream Vacation City"; }
-	td:nth-of-type(9):before { content: "GPA"; }
-	td:nth-of-type(10):before { content: "Arbitrary Data"; }
+  */
+  td:nth-of-type(1){ background-color: #EEE }
+  td:nth-of-type(2):before { content: "Product"; }
+  td:nth-of-type(3):before { content: "Status"; }
+	td:nth-of-type(4):before { content: "HQ"; }
+	td:nth-of-type(5):before { content: "Website"; }
+	td:nth-of-type(6):before { content: "Terms"; }
+  td:nth-of-type(7):before { content: "Privacy Policy"; }
+	td:nth-of-type(8):before { content: "Articles"; }
+  td:nth-of-type(9):before { content: "Data centers"; }
+  td:nth-of-type(10):before { content: "Data breaches"; } 
+	td:nth-of-type(11):before { content: "DPO"; }
+	td:nth-of-type(12):before { content: "Certificates"; }
+	td:nth-of-type(13):before { content: "Data subject form"; }
+	td:nth-of-type(14):before { content: "Edit"; }
 }
 
 
