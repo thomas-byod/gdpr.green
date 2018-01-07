@@ -1,0 +1,152 @@
+[
+  {
+    "id": "beatswitch",
+    "name": "Beatswitch",
+    "description": "Event Management Platform",
+    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "website": "https://www.beatswitch.com",
+    "country": "BE",
+    "gdprStatus": "in-process",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Gertjan De Wilde",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k", "HIPAA"]
+  },
+  {
+    "id": "beatswitch1",
+    "name": "Beatswitch1",
+    "description": "Event Management Platform",
+    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "website": "https://www.beatswitch.com",
+    "country": "BE",
+    "gdprStatus": "in-process",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Gertjan De Wilde",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k"]
+  },
+  {
+    "id": "beatswitch2",
+    "name": "Beatswitch1",
+    "description": "Event Management Platform",
+    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "website": "https://www.beatswitch.com",
+    "country": "BE",
+    "gdprStatus": "ready",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Gertjan De Wilde",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k"]
+  },
+  {
+    "id": "beatswitch8",
+    "name": "Beatswitch",
+    "description": "Event Management Platform",
+    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "website": "https://www.beatswitch.com",
+    "country": "BE",
+    "gdprStatus": "in-process",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Gertjan De Wilde",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k"]
+  },
+  {
+    "id": "beatswitch1l",
+    "name": "Beatswitch1",
+    "description": "Event Management Platform",
+    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "website": "https://www.beatswitch.com",
+    "country": "BE",
+    "gdprStatus": "in-process",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Gertjan De Wilde",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k"]
+  },
+  {
+    "id": "beatswitch23",
+    "name": "Beatswitch1",
+    "description": "Event Management Platform",
+    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "website": "https://www.beatswitch.com",
+    "country": "BE",
+    "gdprStatus": "ready",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Gertjan De Wilde",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k"]
+  }
+]
