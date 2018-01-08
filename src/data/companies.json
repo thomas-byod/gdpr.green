@@ -116,15 +116,40 @@
       "email": "gertjan@beatswitch.com",
       "role": "CEO/CTO"
     },
-    "dataBreaches": [{
-      "date": "10/12/2017",
-      "url": "https://www.beatswtich.com/breach"
-    }],
+    "dataBreaches": null,
     "articles": [{
       "date": "11/14/2017",
       "url": "https://sendgrid.com/blog/the-gdpr-is-coming-how-to-prepare/"
     }],
     "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k"]
+  },
+  {
+    "id": "lastpasss",
+    "name": "LastPass",
+    "description": "Event Management Platform",
+    "logo": "https://images-na.ssl-images-amazon.com/images/I/312B68fn10L.png",
+    "website": "https://www.beatswitch.com",
+    "country": "US",
+    "gdprStatus": "inProgress",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU", "US"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Krista Southworth",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "11/14/2017",
+      "url": "https://blog.lastpass.com/2015/06/lastpass-security-notice.html/",
+      "method": "breach",
+      "recordsLost": "70000000"
+    }],
+    "articles": null,
+    "dataRentention": "30 Days",
     "formUrl": "https://bs.gdprform.io",
     "certifications": ["ISO27k"]
   }

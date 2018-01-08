@@ -13,6 +13,7 @@
     "instantsearch.js": "^2.4.1",
     "react-country-flag": "^0.1.12",
     "react-icons": "^2.2.7",
+    "react-virtualized": "^9.16.1",
     "react-world-flags": "^0.0.3"
   },
   "keywords": [

@@ -37,6 +37,17 @@ a:hover #tw  {
   opacity: 1;
 }
 
+input.search {
+  border-radius: 3px;
+  padding: 14px 15px; 
+  width: 400px;
+  border: 1px solid #EEE;
+  background: #FFF
+}
+
+td.name, th.name {
+  text-align: left;
+}
 
 
 @media 
@@ -44,6 +55,11 @@ only screen and (min-width: 760px) {
   th:first-child, td:first-child {
     padding-left: 30px;
     text-align: left;
+  } 
+
+  th:last-child, td:last-child {
+    padding-right: 30px;
+    text-align: right;
   }
 
   td img.icon {
@@ -96,6 +112,11 @@ only screen and (max-width: 760px),
 		width: 45%; 
 		padding-right: 10px; 
 		white-space: nowrap;
+  }
+
+  input.search {
+    width: 100%;
+    display: block
   }
 
   td img.icon {

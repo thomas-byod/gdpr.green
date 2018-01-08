@@ -33,7 +33,7 @@ const Header = () => (
     >
 
       {/* Logo */}
-      <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
+      <div style={{ flex: 1, display: 'flex', alignItems: 'center', minWidth: '400px' }}>
         <h1 style={{ margin: 0 }}>
           <Link
             to="/"
@@ -58,7 +58,7 @@ const Header = () => (
 
       {/* Search */}
       <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <input type="text" style={{ borderRadius: '3px', padding: '14px 15px', width: '400px', border: '1px solid #EEE', background: '#FFF' }} placeholder={`Search product or company`}/>
+        <input type="text" className='search' placeholder={`Search product or company`}/>
       </div>
 
       {/* Menu */}
