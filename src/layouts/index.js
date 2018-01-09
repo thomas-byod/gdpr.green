@@ -9,6 +9,7 @@ import ProductHuntIcon from 'react-icons/lib/fa/product-hunt'
 import TwitterIcon from 'react-icons/lib/fa/twitter'
 import icon from '../images/icon.svg'
 import { colors } from '../shared/styles'
+import Countdown from '../components/Countdown'
 
 import './index.css'
 
@@ -33,27 +34,32 @@ const Header = () => (
     >
 
       {/* Logo */}
-      <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-             <div style={{ width: 24, height: 24, borderRadius: '50%', background: colors.green, marginRight: '7px', display: 'inline-block' }}></div>
-            GDPR
-          </Link>
-        </h1> 
-        <span 
-          style={{ 
-            color: 'rgb(160, 165, 179)', 
-            fontSize: '1rem', marginLeft: '10px'
-            }}
-          > 
-          | GDPR Readiness directory
-        </span>
+      <div style={{ flex: 1, display: 'flex', flexWrap: 'nowrap', flexDirection: 'column' }}>
+        <div className='logoBox'>
+          <h1 style={{ margin: 0 }} className='logo'>
+            <Link
+              to="/"
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+              }}
+            >
+              <div style={{ width: 24, height: 24, borderRadius: '50%', background: colors.green, marginRight: '7px', display: 'inline-block' }}></div>
+              GDPR         
+            </Link>
+          </h1> 
+          <Countdown />
+        </div>
+        <div style={{ flex: 1 }}>
+          <span 
+            style={{ 
+              color: 'rgb(160, 165, 179)', 
+              fontSize: '1rem'
+              }}
+            > 
+            GDPR Readiness directory for Cloud Services
+          </span>
+        </div>
       </div>
 
       {/* Search */}
@@ -64,7 +70,6 @@ const Header = () => (
       {/* Menu */}
       <div style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
         <ul style={{ listStyle: 'none', float: 'right', margin: 0 }}>
-          <Li><div><p> 100 : 20 : 04 : 01</p></div></Li>
           <Li>About</Li>
           <Li>
             <a href="https://github.com/Gdewilde/gdpr.green">

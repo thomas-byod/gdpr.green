@@ -1,0 +1,1 @@
+export https://github.com/Gdewilde/gdpr.green/blob/master/src/data/companies.json

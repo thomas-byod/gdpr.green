@@ -53,7 +53,7 @@
     "id": "appmiral",
     "name": "Appmiral",
     "description": "Event Management Platform",
-    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "logo": "https://pbs.twimg.com/profile_images/588988638509203456/XVVmSecW.jpg",
     "website": "https://www.beatswitch.com",
     "country": "BE",
     "gdprStatus": "nonCompliant",
@@ -78,7 +78,32 @@
     "id": "channelflow",
     "name": "Channelflow",
     "description": "Event Management Platform",
-    "logo": "https://pbs.twimg.com/profile_images/922908923207839744/5EZID3tH_400x400.jpg",
+    "logo": "https://camo.githubusercontent.com/60c99424ef78e45661021dd0c5896277ff846150/68747470733a2f2f73332e65752d63656e7472616c2d312e616d617a6f6e6177732e636f6d2f6d61726b6574696e672d6769746875622f69636f6e2e706e67",
+    "website": "https://www.beatswitch.com",
+    "country": "BE",
+    "gdprStatus": "unknown",
+    "termsUrl": "https://beatswitch.com/terms",
+    "privacyUrl": "https://beatswitch.com/privacy",
+    "dataCenters": ["EU"],
+    "hostingPartners": ["AWS"],
+    "DPO": {
+      "name": "Gertjan De Wilde",
+      "email": "gertjan@beatswitch.com",
+      "role": "CEO/CTO"
+    },
+    "dataBreaches": [{
+      "date": "10/12/2017",
+      "url": "https://www.beatswtich.com/breach"
+    }],
+    "dataRentention": "",
+    "formUrl": "https://bs.gdprform.io",
+    "certifications": ["ISO27k", "HIPAA"]
+  },
+  {
+    "id": "apideck",
+    "name": "Apideck",
+    "description": "Event Management Platform",
+    "logo": "https://camo.githubusercontent.com/60c99424ef78e45661021dd0c5896277ff846150/68747470733a2f2f73332e65752d63656e7472616c2d312e616d617a6f6e6177732e636f6d2f6d61726b6574696e672d6769746875622f69636f6e2e706e67",
     "website": "https://www.beatswitch.com",
     "country": "BE",
     "gdprStatus": "unknown",

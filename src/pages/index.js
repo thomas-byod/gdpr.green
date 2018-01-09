@@ -97,8 +97,8 @@ const IndexPage = ({ data }) => (
         </tr>
       </thead>
       <tbody>
-        {/* { data && data.allCompaniesJson.edges.map(({ node }, index) => */}
-        { companies && companies.map((node, index) =>
+        {/* { companies && companies.map((node, index) => */}
+        { data && data.allCompaniesJson.edges.map(({ node }, index) =>
           <tr key={index}>
             <td>
               <img src={node.logo} className='icon' alt={`${node.name} icon`} /> 
