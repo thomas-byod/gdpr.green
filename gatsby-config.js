@@ -7,6 +7,12 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-offline`,
     {
+      resolve: `gatsby-plugin-segment`,
+      options: {
+        writeKey: 'qBs8At716FXVw8Xloe4cUaSLzx9QEkjw'
+      }
+    },
+    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: './src/images/favicon.png',

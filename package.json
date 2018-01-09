@@ -9,6 +9,7 @@
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-offline": "^1.0.12",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-segment": "^1.0.2",
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-json": "^1.0.14",
