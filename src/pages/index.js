@@ -39,15 +39,19 @@ for (var o = 0; o < 1000; o++) {
   })
 }
 
-console.log(companies)
-
 const list = []
 
-for(var i = 0; i < 100000; i++) {
+for(var i = 0; i < 500; i++) {
   list.push({ name: 'John', description: 'Information for the table' })
 }
 
-const Status = props => <div style={{ width: 12, height: 12, borderRadius: '50%', margin: '0 auto', background: props.color }}></div>
+const Status = props => (
+  <div className='tooltip'>
+    <div style={{ width: 12, height: 12, borderRadius: '50%', margin: '0 auto', background: props.color }}>
+      <span className='tooltiptext'>{props.title}</span>
+    </div>
+  </div>
+)
 const Pill = ({ title, index }) => <span style={{ background: 'rgb(78, 126, 255)', padding: '3px 7px', borderRadius: '10px', marginRight: '3px', color: '#FFF', fontSize: '12px' }}>{title}</span>
 const A = ({link, title}) =>  <a href={link} target='_blank'>{title}</a>
 
@@ -139,7 +143,7 @@ const IndexPage = ({ data }) => (
               {Date.now()}
             </td> */}
             <td>
-              {node.formUrl ? <a href={`https://${node.name}.gdprform.io`}><FormIcon size={20} /></a> : ''}
+              {node.formUrl ? <a href={`https://${node.name}.gdprform.io`} target='_blank'><FormIcon size={20} /></a> : ''}
             </td>
             <td>
               <a href={`https://${node.name}.gdprform.io`}>Edit</a>
@@ -149,7 +153,7 @@ const IndexPage = ({ data }) => (
       </tbody>
     </table>
 
-    <Table
+    {/* <Table
       width={900}
       height={300}
       headerHeight={20}
@@ -159,7 +163,7 @@ const IndexPage = ({ data }) => (
     >
       <Column label='Name' dataKey='name' />
       <Column label='Description' dataKey='description' />
-    </Table>
+    </Table> */}
   </div>
 )
 

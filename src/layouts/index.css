@@ -1,3 +1,11 @@
+/* * {
+  border: 1px solid #000
+} */
+
+.navigation {
+  flex-flow: row wrap;
+}
+
 img, td p {
   margin-bottom: 0
 }
@@ -50,6 +58,36 @@ td.name, th.name {
 }
 
 
+/* Tooltips */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 3px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  bottom: 120%;
+  left: 50%; 
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
 @media 
 only screen and (min-width: 760px) {
   th:first-child, td:first-child {
@@ -83,6 +121,12 @@ and also iPads specifically.
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
+  .navigation {
+    flex-direction: column;
+    flex: nowrap;
+    height: 100vh;
+  }
+
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
 		display: block; 
@@ -93,7 +137,11 @@ only screen and (max-width: 760px),
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
-	}
+  }
+
+  td:last-child, tr  {
+    border-bottom: 15px solid #FFF
+  }
 
 	td { 
 		/* Behave  like a "row" */
@@ -121,14 +169,18 @@ only screen and (max-width: 760px),
 
   td img.icon {
     width: 128px;
-    margin: 25px auto;
+    margin: 25px auto 0px auto;
+  }
+
+  td.name, th.name {
+    text-align: center;
   }
 	
 	/*
 	Label the data
   */
-  td:nth-of-type(1){ background-color: #EEE }
-  td:nth-of-type(2):before { content: "Product"; }
+  td:nth-of-type(1), td:nth-of-type(2){ background-color: #EEE }
+  td:nth-of-type(2){ padding-bottom: 10px; }
   td:nth-of-type(3):before { content: "Status"; }
 	td:nth-of-type(4):before { content: "HQ"; }
 	td:nth-of-type(5):before { content: "Website"; }
@@ -145,13 +197,6 @@ only screen and (max-width: 760px),
 
 
 
-
-
-
-
-/* * {
-  border: 1px solid #FFF
-} */
 
 /* html {
   font-family: sans-serif;

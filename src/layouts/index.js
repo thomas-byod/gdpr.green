@@ -23,17 +23,17 @@ const Header = () => (
     }}
   >
     <div
+      className='navigation'
       style={{
         margin: '0 auto',
         width: '100%',
         display: 'flex',
         padding: '1.2rem 1.0875rem',
-        flexFlow: 'row wrap'
       }}
     >
 
       {/* Logo */}
-      <div style={{ flex: 1, display: 'flex', alignItems: 'center', minWidth: '400px' }}>
+      <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
         <h1 style={{ margin: 0 }}>
           <Link
             to="/"
@@ -62,7 +62,7 @@ const Header = () => (
       </div>
 
       {/* Menu */}
-      <div style={{ flex: 1, alignItems: 'center' }}>
+      <div style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
         <ul style={{ listStyle: 'none', float: 'right', margin: 0 }}>
           <Li><div><p> 100 : 20 : 04 : 01</p></div></Li>
           <Li>About</Li>
@@ -81,27 +81,28 @@ const Header = () => (
               <TwitterIcon id='ph' color='#FFF' size={24} />
             </a>
           </Li>
-          <Li style={{ margin: '0 0 0 15px', padding: 0 }}>
-            <a 
-              href='https://github.com/Gdewilde/gdpr.green/blob/master/src/data/companies.json'
-              style={{ 
-                textDecoration: 'none'
-                }}
-              >
-              <div style={{ 
-              borderRadius: 3, 
-              backgroundColor: '#4F7FFF', 
-              padding: '14px 15px', 
-              textDecoration: 'none', 
-              color: 'white',
-              fontWeight: 'bold',
-              textDecoration: 'none'
-              }}>
-                <PlusIcon style={{ marginRight: '5px' }} />Add company
-              </div>
-            </a> 
-          </Li>
         </ul>
+      </div>
+      <div>
+        <a 
+          href=''
+          target='_blank'
+          style={{ 
+            textDecoration: 'none'
+            }}
+          >
+          <div style={{ 
+          borderRadius: 3, 
+          backgroundColor: '#4F7FFF', 
+          padding: '14px 18px', 
+          textDecoration: 'none', 
+          color: 'white',
+          fontWeight: 'bold',
+          textDecoration: 'none'
+          }}>
+            <PlusIcon style={{ marginRight: '5px' }} />Add company
+          </div>
+        </a> 
       </div>
     </div>
   </div>
